@@ -34,6 +34,12 @@ Log("Opening Windows Terminal")
 Run, wt.exe
 return
 
+; Open GlazeWM
+^!k::
+Log("Opening Glaze Window Manager")
+Run, "C:\Program Files\glzr.io\GlazeWM\glazewm.exe"
+return
+
 ; Open current folder with Windows Terminal
 ^!z::
 Log("Attempting to open current folder with Windows Terminal")
@@ -95,6 +101,8 @@ Log("Attempting to open current folder with Visual Studio Code")
 return
 
 ; Create a new desktop and go back to the previous virtual desktop
+; COMPLETELY USELESS
+; I wanted to move the currently focused window on a new desktop but I did not manage to do it
 ^!d::
 Log("Creating new virtual desktop")
     Send, ^#d  ; Create a new virtual desktop (Win+Ctrl+D)
